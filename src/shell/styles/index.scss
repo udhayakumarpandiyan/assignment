@@ -1,0 +1,174 @@
+@import '../../styles/vars.scss';
+@import '../../styles/common.scss';
+@import '../../../node_modules/antd/dist/antd.css';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/robotocondensed-regular-webfont.woff2'), url('../../assets/fonts/robotocondensed-regular-webfont.woff'), url('../../assets/fonts/RobotoCondensed-Regular.ttf');
+}
+
+.shell {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //height: 100vh;
+    font-family: 'Roboto';
+    background-image: url('../../assets/icons/slide.png');
+    background-size: cover;
+    //position: relative;
+    .home_container{
+        width: 100%;
+       // height: 100%;
+        //background-color: #ff00ff;
+       
+       
+    }
+
+    .content-transition {
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+    }
+
+    .header {
+        width: 100%;
+        height: 48px;
+
+        @include media-mobile {
+            height: 60px;
+        }
+
+        @include media-tab {
+            height: 60px;
+        }
+
+        background-color: $primaryColor;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        z-index: 10000;
+
+        .tab_container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .tab_normal {
+                font-size: 10px;
+                font-weight: 500;
+                width: 60px;
+                border: none;
+                outline: none;
+                margin-right: 10px;
+                font-weight: 600;
+                border-bottom: none;
+                background-color: transparent;
+                color: #fff;
+                border-radius: 0px;
+                box-shadow: none;
+                cursor: pointer;
+            }
+
+            .tab_selected {
+                font-weight: 500;
+                width: 60px;
+                border: none;
+                outline: none;
+                margin-right: 10px;
+                font-weight: 600;
+                border-bottom: none;
+                background-color: transparent;
+                color: #ffbb00;
+                text-align: center;
+                padding: 0px;
+                margin-bottom: 3px;
+                padding-top: 10px;
+                padding-bottom: 0px;
+                border-bottom: 2px solid #ffbb00;
+            }
+        }
+
+        .user_dropdown {
+            margin-right: 16px;
+            padding: 8px 0px;
+            width: 180px;
+            height: 42px;
+            border-radius: 100em;
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 100em;
+                cursor: pointer;
+            }
+
+
+
+            .ant-dropdown-menu-item {
+                background-color: #ffbb00;
+                height: 50px;
+            }
+        }
+
+        .profile-dropdown {
+            position: relative;
+            margin: 0;
+            padding: 4px 0;
+            text-align: left;
+            list-style-type: none;
+            background-clip: padding-box;
+            border-radius: 4px;
+            outline: none;
+            -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        .dropdown-item-link {
+            padding-left: 10px;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+
+    }
+
+
+    .main_content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding-top: 48px;
+
+        
+        .content {
+            width: 100%;
+
+            @include media-tab {
+                width: 100%;
+                padding: 10px 0px;
+            }
+
+            @include media-mobile {
+                width: 100%;
+                padding: 10px 0px;
+            }
+
+            height: 100%;
+            overflow-y: no-scroll;
+            padding: 0px 20px 50px 30px;
+        }
+
+    }
+}

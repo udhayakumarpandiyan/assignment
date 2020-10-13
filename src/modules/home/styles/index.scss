@@ -1,0 +1,311 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/common.scss';
+
+.home_page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    .signin_content {
+        display: flex;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow-y: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup_content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .outer-container{
+        width: 30%;
+        @include media-mobile {
+            width: 86%;
+        }
+
+        @include media-tab {
+            width: 86%;
+        }
+
+        @include media-desktop-sm {
+            width: 100%;
+        }
+        margin : 10% 0px 20% 0px;
+        padding: 30px 20px 20px 20px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        border: 0.5px solid rgba(4, 53, 99,0.5);;
+        box-shadow: 1px 1px 10px 2px rgba(4, 53, 99,0.4);
+        @include media-mobile {
+            border: none;
+            box-shadow: none;
+            justify-content: flex-start;
+        }
+        @include media-tab {
+            border: none;
+            box-shadow: none;
+            justify-content: flex-start;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .signin_container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .form{
+                width: 90%;
+                .ant-form-item{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    .ant-form-explain{
+                        display: flex;
+                        padding-left: 32px;
+                    }
+                }
+                .button-container{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .ant-form-item-control{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+            
+            
+
+            input {
+                @extend .text_input;
+                width: 100%;
+                margin: 10px 0px;
+                height: 36px;
+                border-radius: 4px;
+                padding-right: 30px;
+                @include media-mobile{
+                    height: 36px;
+                    font-size: 16px;
+                    
+                 }
+                 @include media-tab{
+                    height: 36px;
+                    font-size: 16px;
+                 }
+            }
+
+            .button {
+                @extend .button;
+                margin: 24px 0px;
+                width: 110px;
+                background: linear-gradient($primaryColor, $secondaryColor);
+                text-transform: uppercase;
+                font-weight: 600;
+                @include media-mobile{
+                    width: 130px;
+                    height: 42px;
+                    font-size: 16px;
+                    
+                 }
+            }
+
+                .forgot {
+                    display: block;
+                    float: right;
+                    padding-left: 60px;
+                    cursor: pointer;
+                    text-align: right;
+                    color: $secondaryColor;
+                    font-weight: 500;
+                }
+
+                .forgot:hover {
+                    color: $primaryColor;
+                    text-decoration: underline;
+                }
+
+               
+
+            .signup_now {
+                font-size: 14px;
+                @include media-mobile{
+                    font-size: 16px;
+                 }
+
+                span {
+                    font-size: 14px;
+                    @include media-mobile{
+                        font-size: 16px;
+                     }
+                    font-weight: 500;
+                    cursor: pointer;
+                    padding-left: 10px;
+                    color: $secondaryColor;
+                    font-weight: bold;
+                
+                }
+
+                span:hover {
+                    text-decoration: underline;
+                }
+            
+        }
+
+        }
+    }
+
+
+    .signup_outer_container{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 20px;
+        background-color: #ffffff;
+        
+
+        @include media-mobile {
+            width: 100%;
+            margin: 0px;
+            //height: 100%;
+        }
+
+        @include media-tab {
+            width: 100%;
+            margin: 0px;
+        }
+        
+        padding: 30px 20px 50px 20px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px 2px rgba(4, 53, 99,0.8);
+        .signup_container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .button {
+                @extend .button;
+                margin: 24px 20px;
+                width: 110px;
+                background: linear-gradient($primaryColor, $secondaryColor);
+                text-transform: uppercase;
+                font-weight: 600;
+                @include media-mobile{
+                    width: 130px;
+                    height: 42px;
+                    font-size: 16px;
+                    
+                 }
+            }
+            .back-button{
+                @extend .button;
+                margin: 24px 20px;
+                width: 110px;
+                border: 1px solid $primaryColor;
+                color: $primaryColor;
+                background: #ffffff;
+                text-transform: uppercase;
+                font-weight: 600;
+
+            }
+            form{
+                width: 100%;
+            .ant-form-item{
+                display: flex;
+                width: 100%;
+                //align-items: center;
+                .ant-form-item-label{
+                    width: 200px;
+                    margin-top: -4px;
+                    text-align: right;
+                    padding-right: 15px;
+
+                    @include media-mobile {
+                        margin-top: 0px;
+                        padding-top: 4px;
+                    }
+                    @include media-tab {
+                        margin-top: 0px;
+                        padding-top: 4px;
+                    }
+
+                }
+                .ant-form-item-control-wrapper{
+                    width: 100%;
+                 }
+                }
+            }
+            .inner_container{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 10px;
+                .label{
+                    width: 160px;
+                    text-align: right;
+                    font-size: 16px;
+                    @include media-mobile {
+                        text-align: left;
+                    }
+            
+                    @include media-tab {
+                        text-align: left;
+                    }
+                }
+                input {
+                    @extend .text_input;
+                    width: 200px;
+                    @include media-mobile {
+                        width: 80%;
+                    }
+            
+                    @include media-tab {
+                        width: 66%;
+                    }
+                    margin: 10px 20px;
+                    height: 36px;
+                    border-radius: 4px;
+                }
+                .dropdown{
+                    width: 200px;
+                    @include media-mobile {
+                        width: 80%;
+                    }
+            
+                    @include media-tab {
+                        width: 66%;
+                    }
+                    height: 18px;
+                    margin: 12px 20px 20px 12px;
+
+                }
+                
+                
+            }
+        }
+}
+}
+.ant-form-item-children{
+    display: flex;
+    align-items: center;
+}

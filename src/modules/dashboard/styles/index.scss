@@ -1,0 +1,19 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/common.scss';
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    label{
+        font-size: 90px;
+        color: white;
+        font-weight: bold;
+    }
+}
+  
